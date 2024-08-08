@@ -2,8 +2,8 @@ import pygame as p
 import engine, ai
 
 # Player settings. Turn player_one to True to play as white and/or player_two to True to play black.
-player_one = False  # If the AI is playing white, then False
-player_two = False  # Same as above but for black
+player_one = False
+player_two = False
 
 p.init()  # Initialize pygame
 
