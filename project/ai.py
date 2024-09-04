@@ -134,20 +134,6 @@ def find_best_move(game_state, valid_moves):
 
 
 def find_negamax_move_alphabeta(game_state, valid_moves, depth, alpha, beta, turn_multiplier):
-    """
-    NegaMax algorithm with alpha beta pruning.
-
-    Alpha beta pruning eliminates the need to check all moves within the game_state tree when
-    a better branch has been found or a branch has too low of a score.
-
-    alpha: upper bound (max possible); beta: lower bound (min possible)
-    If max score is greater than alpha, that becomes the new alpha value.
-    If alpha becomes >= beta, break out of branch.
-
-    White is always trying to maximise score and black is always
-    trying to minimise score. Once the possibility of a higher max or lower min
-    has been eliminated, there is no need to check further branches.
-    """
     global next_move
     if depth == 0:
         return turn_multiplier * score_board(game_state)
